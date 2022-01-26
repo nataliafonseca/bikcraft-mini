@@ -1,0 +1,204 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #f7f7f7;
+  margin: 0;
+  display: grid;
+  justify-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  gap: 50px;
+  margin-top: 60px;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+p {
+  font-size: 1.25rem;
+}
+
+header {
+  display: grid;
+  justify-items: center;
+  gap: 60px;
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.menu a {
+  display: block;
+  background: white;
+  color: black;
+  padding: 15px 30px;
+  border-radius: 4px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.2s;
+  border: 2px solid transparent;
+}
+
+.menu a:hover {
+  border: 2px solid #ee2211;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 1000px;
+}
+
+.intro {
+  background: white;
+  display: grid;
+  padding: 50px;
+  justify-items: end;
+  text-align: end;
+  position: relative;
+  align-content: center;
+  gap: 20px;
+}
+
+.intro a {
+  background: #ee2211;
+  color: white;
+  padding: 15px 30px;
+  border-radius: 4px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.2s;
+}
+
+.intro h1 {
+  font-size: 2rem;
+}
+
+.intro a:hover {
+  background: #900;
+}
+
+.intro::after {
+  content: "";
+  position: absolute;
+  background: #ee2211;
+  width: 60px;
+  height: 4px;
+  top: 30px;
+  right: -30px;
+}
+
+.intro-cover img {
+  object-fit: cover;
+  object-position: center;
+  height: 100%;
+}
+
+.subtitulo {
+  display: grid;
+  color: #c6c6c6;
+  background-image: url(/assets/img/onda.svg);
+  background-repeat: repeat;
+  align-items: center;
+  padding: 30px;
+  text-transform: uppercase;
+  font-size: 4rem;
+  text-align: end;
+  /* word-break: break-all; */
+}
+
+.vantagens {
+  background: white;
+  padding: 30px;
+}
+
+.vantagens-item {
+  display: grid;
+  place-items: start;
+  grid-template-columns: auto 1fr;
+  gap: 10px 20px;
+  padding: 20px;
+  border-left: 4px solid transparent;
+  transition: all 0.2s;
+}
+
+.vantagens-item p {
+  grid-column: 2;
+}
+
+.vantagens-item:nth-child(odd) {
+  background: #f7f7f7;
+}
+
+.vantagens-item:hover {
+  border-left: 4px solid #ee2211;
+}
+
+footer {
+  display: block;
+  width: 100%;
+  margin: 0;
+  background: white;
+}
+
+footer p {
+  text-align: center;
+  padding: 40px;
+}
+
+@media (max-width: 1000px) {
+  .container-vantagens {
+    grid-template-columns: 1fr;
+  }
+
+  .subtitulo {
+    text-align: center;
+  }
+}
+
+@media (max-width: 760px) {
+  body {
+    gap: 30px;
+    margin-top: 20px;
+  }
+
+  header {
+    gap: 30px;
+  }
+
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  .intro {
+    justify-items: start;
+    text-align: left;
+  }
+
+  .intro::after {
+    display: none;
+  }
+
+  .subtitulo {
+    font-size: 3rem;
+    text-align: center;
+  }
+}
+
+@media (max-width: 400px) {
+  .subtitulo {
+    font-size: 2rem;
+  }
+}
